@@ -22,6 +22,17 @@
                         <td>Following course: </td>
                         <td> <?php echo $_POST["n_course"] ;?> </td>
                     </tr>
+                    <tr>
+                        <td>Unit: </td>
+                        <td>
+                            <?php 
+                            $str="";
+                            foreach($_POST["unit"] as $key => $value){
+                                $str =$str.$value."," ;
+                            }
+                            echo substr_replace($str,"",-1);
+                            ?> </td>
+                    </tr>
                 </table>
         </body>
 </body>
